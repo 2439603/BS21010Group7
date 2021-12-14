@@ -68,6 +68,8 @@ cap.set(4, 600)
 
 if not cap.isOpened():
     cap.open()
+# This line helps the user to know how to end the scrpit    
+print("Press Q to finish to end the script")
 
 while(True):
     ret, frame = cap.read()
