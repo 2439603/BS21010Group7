@@ -1,0 +1,10 @@
+'''
+Because the "Open CV" libraries could not be installed directly on python3, we need PIP for the installation. 
+Also the version of "Open CV" should match the version of "Visual Studio" on your device to realise the functions. 
+Numpy is also used but it is default in Anaconda. 
+'''
+#Download this file if PIP is not installed: get-pip.py
+#Open a cmd prompt and navigate to the file location
+#Run commands:
+python get-pip.py
+pip install opencv-python
