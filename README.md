@@ -1,4 +1,4 @@
-# BS21010Group7 Seq4 Group Project
+# BS21010 Group7 Seq4 Group Project
 
 
 
