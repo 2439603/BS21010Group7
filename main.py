@@ -30,8 +30,8 @@ def recogniseColour(): #This function can identify a specific color in the image
 #Result in only green figures shown in res window.
 
 def outlineRec():#Again we identify green colour, but for the object edges this time.
-    lower = np.array([36, 0, 100])
-    upper = np.array([85, 0, 255])
+    lower = np.array([36, 0, 0])
+    upper = np.array([85, 255, 255])
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     mask = cv2.inRange(hsv, lower, upper)
     mask = cv2.erode(mask, None, iterations = 5)
@@ -59,7 +59,7 @@ def outlineRec():#Again we identify green colour, but for the object edges this 
         cX = int(m["m10"] / m["m00"])
         cY = int(m["m01"] / m["m00"])
         cv2.circle(frame, (cX, cY), 10, (255, 0,0), -1)
-        cv2.imshow("original", frame)
+        cv2.imshow("centre", frame)
 
 #Open the webcam:
 cap = cv2.VideoCapture(0)
@@ -87,7 +87,7 @@ cv2.destroyAllWindows()
 #Other colours for test:
 '''
 the values that we can find after lower and upper are call RGB number. 
-The RGB color model is an additive color model[1] in which the red, green, and blue primary colours of light are added together in various ways to reproduce a broad array of colours. 
+The RGB color model is an additive color model in which the red, green, and blue primary colours of light are added together in various ways to reproduce a broad array of colours. 
 The name of the model comes from the initials of the three additive primary colours, red, green, and blue.
 
 The main purpose of the RGB color model is for the sensing, representation, and display of images in electronic systems, such as televisions and computers, though it has also been used in conventional photography. 
