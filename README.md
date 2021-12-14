@@ -1,6 +1,5 @@
-# BS21010Group7
+# BS21010Group7 Seq4 Group Project
 
-Seq4 Group Project
 
 
 Program Title: Watch Out for the Green Object
