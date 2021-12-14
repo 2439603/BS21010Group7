@@ -23,7 +23,7 @@ def recogniseColour(): #This function can identify a specific color in the image
     #Mask and display of various image:
     mask = cv2.inRange(hsv, lower, upper)
     res = cv2.bitwise_and(frame, frame, mask=mask)
-    cv2.imshow("frame", frame)
+    cv2.imshow("original", frame)
     cv2.imshow("mask", mask)
     cv2.imshow("res", res)
 #Mask covers areas for shape, with bitwise_and() we gain interested arrays.  
@@ -36,7 +36,6 @@ def outlineRec():#Again we identify green colour, but for the object edges this 
     mask = cv2.inRange(hsv, lower, upper)
     mask = cv2.erode(mask, None, iterations = 5)
     #Erosion is used to erase the unwanted digits, in this function computer excludes all that's not green.
-    cv2.imshow("original", frame)
     cv2.imshow("only green", mask)
      
     #Identify the object's outline:
